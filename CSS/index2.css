@@ -1,0 +1,544 @@
+html {
+  background: url("../images/plage-de-berck-sur-mer.png");
+  background-size: cover;
+  background-attachment: fixed;
+
+
+}
+
+.header .logo a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: green;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  padding: 0%;
+  margin: 0%;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: green;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid green;
+  text-decoration: none;
+
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: greenyellow;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  color: red;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+
+  padding: 28px 20px;
+  position: right;
+  user-select: none;
+  border-bottom: 5px solid black;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 300px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+footer {
+
+  background: green;
+
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+
+  background-color: #f2f2f2;
+  height: 110px;
+  padding: 10px 0;
+
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+.lang-menu {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.lang-menu .selected-lang {
+  display: flex;
+  justify-content: space-between;
+  line-height: ;
+  cursor: pointer;
+}
+
+.lang-menu .selected-lang:before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.countryflags.io/fr/flat/32.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lang-menu ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.lang-menu ul li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu ul li a {
+  text-decoration: none;
+  width: 125px;
+  padding: 5px 10px;
+  display: block;
+}
+
+.lang-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.de:before {
+  background-image: url(https://www.countryflags.io/de/flat/32.png);
+}
+
+.en:before {
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+.fr:before {
+  background-image: url(https://www.countryflags.io/fr/flat/32.png);
+}
+
+
+
+.lang-menu:hover ul {
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: green;
+
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 100px;
+}
+
+.element {
+  display: inline-block;
+  color: white;
+  width: 9em;
+  border-radius: 50em 50em 0 0;
+  text-align: center;
+}
+
+footer li {
+  display: inline-block;
+}
+
+.logos {
+  width: 15%;
+
+}
+
+.conteneur {
+
+  height: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.acceuil {
+  width: 85%;
+  height: 70em;
+  margin: 8em 1em 1em 1em;
+  padding: 1em;
+  background-color: rgba(119, 119, 119, 0.8);
+  color: white;
+  overflow: hidden;
+  box-shadow: 7px 7px 7px black;
+}
+
+/* 48em = 768px */
+
+
+@media screen and (min-width: 1000px) {
+
+  .logo {
+    color: red;
+    animation-duration: 2s;
+    animation-name: slidein;
+    position: absolute;
+  }
+
+
+  @keyframes slidein {
+    from {
+      left: 5em;
+      width: 25%;
+    }
+
+
+
+    to {
+      left: 0%;
+      width: 0%;
+    }
+  }
+
+
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+    font-size: 15px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+
+  }
+
+  .header .menu-icon {
+    display: none;
+
+
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+  * {
+    box-sizing: border-box;
+
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* header {
+
+    background-color: #f2f2f2;
+    height: 110px;
+    padding: 10px 0;
+
+  } */
+
+  .header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .logo img {
+    width: 100px;
+
+  }
+
+  .lang-menu {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    left: 25%;
+    top: 3px;
+  }
+
+  .lang-menu .selected-lang {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    cursor: pointer;
+  }
+
+  .lang-menu .selected-lang:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lang-menu ul li a {
+    text-decoration: none;
+    width: 125px;
+    padding: 5px 10px;
+    display: block;
+  }
+
+  .lang-menu ul li:hover {
+    background-color: #f2f2f2;
+  }
+
+  .lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .de:before {
+    background-image: url(https://www.countryflags.io/de/flat/32.png);
+  }
+
+  .en:before {
+    background-image: url(https://www.countryflags.io/us/flat/32.png);
+  }
+
+  .fr:before {
+    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+  }
+
+
+
+
+  .lang-menu:hover ul {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background: green;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 50px;
+    height: 100px;
+  }
+
+  .element {
+    display: inline-block;
+    color: white;
+    /* padding: 1em;
+    padding-bottom: 1.7em; */
+    width: 9em;
+    border-radius: 50em 50em 0 0;
+    text-align: center;
+  }
+
+  footer li {
+    display: inline-block;
+  }
+
+  .conteneur {
+    padding-top: 35px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 70%;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+
+  .acceuil {
+    width: 90%;
+    height: 57em;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgba(119, 119, 119, 0.8);
+    color: white;
+    overflow: hidden;
+    box-shadow: 7px 7px 7px black;
+  }
+
+  .logos{
+    width: 20px;
+  }
+}
